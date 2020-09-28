@@ -1,0 +1,12 @@
+<section
+  class="img"
+  [ngStyle]="{ 'background-image': 'url(' + ticketData?.poster?.path + ')' }"
+></section>
+<section class="desc">
+  <div (click)="ticketCloseHandler()" class="close">x</div>
+  <h1 class="desc__title">{{ ticketData.name.ru }}</h1>
+  <section class="desc__date">
+    {{ ticketData?.date }}&nbsp;{{ ticketData?.duration }}
+  </section>
+  <section class="desc__text" [innerHTML]="ticketData.description.ru"></section>
+</section>

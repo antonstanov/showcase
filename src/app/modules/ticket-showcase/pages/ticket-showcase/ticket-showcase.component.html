@@ -1,0 +1,24 @@
+<app-ticket-current
+  (openTicketModal)="openTicketModal(currentTicketData)"
+  *ngIf="currentTicketData"
+  [ticketData]="currentTicketData"
+></app-ticket-current>
+
+<section *ngIf="tickets$ | async as tickets" class="tickets">
+  <figure *ngFor="let ticket of tickets">
+    <img (click)="currentTicket(ticket)" [src]="ticket?.poster?.path"/>
+    <figcaption class="desc">
+      <section class="desc__date">
+        {{ ticket?.date }}&nbsp;{{ ticket?.duration }}
+      </section>
+      <section class="desc__text">{{ ticket?.name?.ru }}</section>
+    </figcaption>
+  </figure>
+</section>
+
+<app-ticket-showcase-modal
+  (ticketClose)="closeTicketModal($event)"
+  *ngIf="ticketDataOpened"
+  [ticketData]="ticketDataOpened"
+>
+</app-ticket-showcase-modal>

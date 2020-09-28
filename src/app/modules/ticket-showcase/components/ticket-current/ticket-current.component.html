@@ -1,0 +1,11 @@
+<section
+  [ngStyle]="{ 'background-image': 'url(' + ticketData?.poster?.path + ')' }"
+  class="main-img"
+>
+  <div class="overlay">
+    <section class="desc">
+      <h1 [innerHTML]="ticketData?.name?.ru" class="desc__title"></h1>
+      <button (click)="openTicketModalHandler()">Подробнее</button>
+    </section>
+  </div>
+</section>

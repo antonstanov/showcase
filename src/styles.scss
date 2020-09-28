@@ -1,0 +1,24 @@
+/* You can add global styles to this file, and also import other style files */
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+
+  background-image: url('https://img2.goodfon.com/original/1680x1050/e/dc/seryy-linii-fon.jpg');
+  background-size: cover;
+  background-position: center;
+
+  font-family: 'Roboto', sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+figure {
+  margin: 0;
+}
